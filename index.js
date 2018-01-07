@@ -40,8 +40,8 @@ function createRock(x) {
   var top = 0;
   rock.style.top = top;
 
-   document.getElementById("game").appendChild(rock);
-   moveRock(rock);
+  document.getElementById("game").appendChild(rock);
+  moveRock(rock);
 
   function moveRock(rock) {
 
