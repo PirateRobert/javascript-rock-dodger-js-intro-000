@@ -48,7 +48,7 @@ function checkCollision(rock) {
     } if (rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge) {
       return true;
     } if (rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge) {
-      return true;
+      return true;  
     }
   }
 }
@@ -162,5 +162,5 @@ function start() {
 
   gameInterval = setInterval(function() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)));
-  }, 1000)
+  }, 1000);
 }
