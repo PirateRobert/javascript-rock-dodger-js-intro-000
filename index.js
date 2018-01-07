@@ -89,7 +89,7 @@ function createRock(x) {
        var topper = rock.style.top.replace('px', '')
        var num = parseInt(topper, 10)
        rock.style.top = `${num + 2}px`
-       moveRock()
+       window.requestAnimationFrame(moveRock
      }
     /**
      * But if the rock *has* reached the bottom of the GAME,
