@@ -134,6 +134,7 @@ function moveDodgerLeft() {
   if (left > 0) {
     dodger.style.left = `${left - 3}px`
 }
+}
 
 function moveDodgerRight() {
   var rightNumbers = DODGER.style.right.replace('px', '')
@@ -142,7 +143,7 @@ function moveDodgerRight() {
   if (right > 0) {
     dodger.style.right = `${right - 3}px`
 }
-
+}
 /**
  * @param {string} p The position property
  * @returns {number} The position as an integer (without 'px')
@@ -150,7 +151,7 @@ function moveDodgerRight() {
 function positionToInteger(p) {
   return parseInt(p.split('px')[0]) || 0
 }
-
+  
 function start() {
   window.addEventListener('keydown', moveDodger)
 
