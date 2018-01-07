@@ -65,7 +65,7 @@ function createRock(x) {
    * Now that we have a rock, we'll need to append
    * it to GAME and move it downwards.
    */
-   $("game").appendChild(rock);
+   document.getElementById("game").appendChild(rock);
    moveRock();
 
   /**
