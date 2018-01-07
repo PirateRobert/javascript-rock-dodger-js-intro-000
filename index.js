@@ -118,7 +118,8 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  document.getElementById("div").querySelectorAll(".rock").remove();
+  var elem = document.getElementById("div").querySelectorAll(".rock");
+  elem.remove();
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!")
 }
