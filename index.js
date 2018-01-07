@@ -64,7 +64,7 @@ function createRock(x) {
    * Now that we have a rock, we'll need to append
    * it to GAME and move it downwards.
    */
-
+   $("game").append(rock)
 
   /**
    * This function moves the rock. (2 pixels at a time
@@ -109,14 +109,6 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  // implement me!
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
      if (e===37){
        moveDodgerLeft()
      } else if (e ===39){
