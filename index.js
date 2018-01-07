@@ -78,6 +78,9 @@ function createRock(x) {
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
+     var topper = rock.style.top.replace('px', '')
+     var num = parseInt(topper, 10)
+     rock.style.top = `${num - 2}px`
      if (checkCollision(rock)){
        endGame()
      }
@@ -85,7 +88,7 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
-     else if (rock.top < 400){
+     else if (rock.style.top < 400){
 
      }
     /**
