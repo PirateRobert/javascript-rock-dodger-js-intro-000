@@ -1,42 +1,26 @@
-/**
- * Don't change these constants!
- */
+
 const DODGER = document.getElementById('dodger');
 const GAME = document.getElementById('game');
 const GAME_HEIGHT = 400;
 const GAME_WIDTH = 400;
-const LEFT_ARROW = 37; // use e.which!
-const RIGHT_ARROW = 39; // use e.which!
+const LEFT_ARROW = 37;
+const RIGHT_ARROW = 39;
 const ROCKS = [];
 const START = document.getElementById('start');
 
 var gameInterval = null;
 
-/**
- * Be aware of what's above this line,
- * but all of your work should happen below.
- */
 
 function checkCollision(rock) {
   const top = positionToInteger(rock.style.top);
   if (top > 360) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left);
 
-    // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
     const dodgerRightEdge =  dodgerLeftEdge + 40;
 
     const rockLeftEdge = positionToInteger(rock.style.left);
-
-    // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
     const rockRightEdge = rockLeftEdge + 20;
-              /**
-               * 1. The rock's left edge is < the DODGER's left edge,
-               *    and the rock's right edge is > the DODGER's left edge;
-               * 2. The rock's left edge is > the DODGER's left edge,
-               *    and the rock's right edge is < the DODGER's right edge;
-               * 3. The rock's left edge is < the DODGER's right edge,
-               *    and the rock's right edge is > the DODGER's right edge
-               */
+
       if (rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge) {
       return true;
     } if (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge) {
@@ -55,11 +39,7 @@ function createRock(x) {
 
   var top = 0;
   rock.style.top = top;
-
-  /**
-   * Now that we have a rock, we'll need to append
-   * it to GAME and move it downwards.
-   */
+\
    document.getElementById("game").appendChild(rock);
    moveRock(rock);
 
@@ -68,10 +48,7 @@ function createRock(x) {
      if (checkCollision(rock)){
        endGame();
      }
-    /**
-     * Otherwise, if the rock hasn't reached the bottom of
-     * the GAME, we want to move it again.
-     */
+
      else if (rock.style.top < 400){
        var topper = rock.style.top.replace('px', '');
        var num = parseInt(topper, 10);
