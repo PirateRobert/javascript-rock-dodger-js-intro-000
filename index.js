@@ -1,16 +1,16 @@
 /**
  * Don't change these constants!
  */
-const DODGER = document.getElementById('dodger')
-const GAME = document.getElementById('game')
-const GAME_HEIGHT = 400
-const GAME_WIDTH = 400
-const LEFT_ARROW = 37 // use e.which!
-const RIGHT_ARROW = 39 // use e.which!
-const ROCKS = []
-const START = document.getElementById('start')
+const DODGER = document.getElementById('dodger');
+const GAME = document.getElementById('game');
+const GAME_HEIGHT = 400;
+const GAME_WIDTH = 400;
+const LEFT_ARROW = 37; // use e.which!
+const RIGHT_ARROW = 39; // use e.which!
+const ROCKS = [];
+const START = document.getElementById('start');
 
-var gameInterval = null
+var gameInterval = null;
 
 /**
  * Be aware of what's above this line,
@@ -18,18 +18,18 @@ var gameInterval = null
  */
 
 function checkCollision(rock) {
-  const top = positionToInteger(rock.style.top)
+  const top = positionToInteger(rock.style.top);
 
   // rocks are 20px high
   // DODGER is 20px high
   // GAME_HEIGHT - 20 - 20 = 360px;
   if (top > 360) {
-    const dodgerLeftEdge = positionToInteger(DODGER.style.left)
+    const dodgerLeftEdge = positionToInteger(DODGER.style.left);
 
     // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
     const dodgerRightEdge = positionToInteger(DODGER.style.right);
 
-    const rockLeftEdge = positionToInteger(rock.style.left)
+    const rockLeftEdge = positionToInteger(rock.style.left);
 
     // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
     const rockRightEdge = positionToInteger(rock.style.right);
