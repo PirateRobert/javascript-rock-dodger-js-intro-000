@@ -89,12 +89,13 @@ function moveDodger(e) {
    }
 
 function moveDodgerLeft() {
-  var leftNumbers = DODGER.style.left.replace('px', '');
-  var left = parseInt(leftNumbers, 10);
+  window.requestAnimationFrame(function() {
+    const left = positionToInteger(DODGER.style.left)
 
-  if (left > 0) {
-    DODGER.style.left = `${left - 3}px`;
-}
+    if (left > 0) {
+      DODGER.style.left = `${left - 4}px`;
+    }
+  })
 }
 
 function moveDodgerRight() {
