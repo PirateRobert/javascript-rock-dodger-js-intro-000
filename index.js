@@ -55,22 +55,17 @@ function createRock(x) {
        rock.style.top = `${num + 2}px`;
        window.requestAnimationFrame(moveRock);
      }
-    /**
-     * But if the rock *has* reached the bottom of the GAME,
-     * we should remove the rock from the DOM
-     */
+
      else{
         document.getElementById("game").remove(rock);
      }
   }
 
-  // We should kick of the animation of the rock around here
   window.requestAnimationFrame(moveRock);
-  // Add the rock to ROCKS so that we can remove all rocks
-  // when there's a collision
+
   ROCKS.push(rock);
 
-  // Finally, return the rock element you've created
+
   return rock;
 }
 
@@ -116,10 +111,7 @@ function moveDodgerRight() {
     DODGER.style.right = `${right - 3}px`;
 }
 }
-/**
- * @param {string} p The position property
- * @returns {number} The position as an integer (without 'px')
- */
+
 function positionToInteger(p) {
   return parseInt(p.split('px')[0]) || 0;
 }
