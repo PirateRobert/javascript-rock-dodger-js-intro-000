@@ -48,7 +48,7 @@ function checkCollision(rock) {
 }
 
 function createRock(x) {
-  var rock = document.createElement('div');
+  const rock = document.createElement('div');
 
   rock.className = 'rock';
   rock.style.left = `${x}px`;
