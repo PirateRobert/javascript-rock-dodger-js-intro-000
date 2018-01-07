@@ -48,7 +48,7 @@ function checkCollision(rock) {
     } if (rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge) {
       return true;
     } if (rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge) {
-      return true;  
+      return true;
     }
   }
 }
@@ -135,7 +135,7 @@ function moveDodgerLeft() {
   var left = parseInt(leftNumbers, 10);
 
   if (left > 0) {
-    dodger.style.left = `${left - 3}px`;
+    DODGER.style.left = `${left - 3}px`;
 }
 }
 
@@ -144,7 +144,7 @@ function moveDodgerRight() {
   var right = parseInt(rightNumbers, 10);
 
   if (right > 0) {
-    dodger.style.right = `${right - 3}px`;
+    DODGER.style.right = `${right - 3}px`;
 }
 }
 /**
