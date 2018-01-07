@@ -65,13 +65,13 @@ function createRock(x) {
    * it to GAME and move it downwards.
    */
    $("game").append(rock)
-   moveRock(rock)
+   moveRock()
 
   /**
    * This function moves the rock. (2 pixels at a time
    * seems like a good pace.)
    */
-  function moveRock(rock) {
+  function moveRock() {
     // implement me!
     // (use the comments below to guide you!)
     /**
@@ -85,7 +85,9 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
+     else if (rock.top < 400){
 
+     }
     /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
