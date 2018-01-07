@@ -43,15 +43,12 @@ function createRock(x) {
   GAME.appendChild(rock);
 
   function moveRock(rock) {
-
+     rock.style.top = `${top += 2}px`;
      if (checkCollision(rock)){
        return endGame();
      }
 
-     else if (rock.style.top < 400){
-       var topper = rock.style.top.replace('px', '');
-       var num = parseInt(topper, 10);
-       rock.style.top = `${num + 2}px`;
+     else if (rock.style.top < GAME_HEIGHT){
        window.requestAnimationFrame(moveRock);
      }
 
