@@ -97,7 +97,7 @@ function createRock(x) {
      * we should remove the rock from the DOM
      */
      else{
-        $("game").remove("rock");
+        document.getElementById("game").remove(rock);
      }
   }
 
