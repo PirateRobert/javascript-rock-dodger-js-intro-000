@@ -80,7 +80,7 @@ function createRock(x) {
      */
      var topper = rock.style.top.replace('px', '')
      var num = parseInt(topper, 10)
-     rock.style.top = `${num - 2}px`
+     rock.style.top = `${num + 2}px`
      if (checkCollision(rock)){
        endGame()
      }
@@ -101,7 +101,7 @@ function createRock(x) {
   }
 
   // We should kick of the animation of the rock around here
-
+  
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
   ROCKS.push(rock)
