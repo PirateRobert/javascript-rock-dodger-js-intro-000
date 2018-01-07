@@ -122,8 +122,10 @@ function endGame() {
 
 function moveDodger(e) {
      if (e===37){
+       e.preventDefault()
        moveDodgerLeft();
      } else if (e ===39){
+       e.preventDefault()
        moveDodgerRight();
      }
    }
