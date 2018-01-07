@@ -45,7 +45,7 @@ function createRock(x) {
   function moveRock(rock) {
 
      if (checkCollision(rock)){
-       endGame();
+       return endGame();
      }
 
      else if (rock.style.top < 400){
